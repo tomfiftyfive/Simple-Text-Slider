@@ -10,16 +10,10 @@
     License: GPL
 */
 
-/* 
-    Shortcode
-    [simple-text-slider before="text" slides="1,2,3" after="text" speed="3"]
-*/
-
-
 // TODO: add style css version and prefix
-add_action( 'wp_enqueue_scripts', 'simpleTextSlider_css' );
+add_action( 'wp_enqueue_scripts', 'simpleTextSlider_files' );
 
-function simpleTextSlider_css() {
+function simpleTextSlider_files() {
     // Respects SSL, Style.css is relative to the current file
     wp_register_style( 'simpleTs-basic', plugins_url('css/simpleTs_style.css', __FILE__) );
     wp_enqueue_style( 'simpleTs-basic' );
@@ -31,6 +25,7 @@ function simpleTextSlider_css() {
     wp_enqueue_script( 'simpleTs-main' );
 }
 
+// shortcode function
 function simpleTextSlider($atts) {
     extract(shortcode_atts(array(
         "before" => 'I like',
@@ -39,15 +34,18 @@ function simpleTextSlider($atts) {
         "speed" => ''
         ), $atts));
     
+    // split slides
     $slideList = explode( ',', $slides );
     
     // TODO: make tag dynamic
     $tag = "h3";
     
+    // count slides
     $slideListOutput = "";
     $slideListCount = count($slideList);
-    $slideListPosition = 0;
     
+    $slideListPosition = 0;
+    // loop trough slides and generate them
     foreach ($slideList as $singleSlide) {
         $slideListPosition++;
         
@@ -59,6 +57,7 @@ function simpleTextSlider($atts) {
         
     }
     
+    // html return/output
     return 
         '<' . $tag . ' class="simpleTs_Container" style="visibility: visible;">
             <p class="before">' . $before . '</p>

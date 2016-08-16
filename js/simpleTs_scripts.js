@@ -8,7 +8,7 @@ $(document).ready(function() {
     
     var simpleTs_total = 0;
     
-    // create a slider fpr each class: .simpleTs_Container .inner
+    // create a slider for each class: .simpleTs_Container .inner
     $(".simpleTs_Container .inner").each(function() {
         // total
         simpleTs_total++;
