@@ -1,4 +1,5 @@
 <?php
+defined( 'ABSPATH' ) or die( 'Nope!' );
 
 /*
     Plugin Name: Simple Text Slider
