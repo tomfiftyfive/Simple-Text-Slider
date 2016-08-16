@@ -10,6 +10,9 @@
     License: GPL
 */
 
+add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'simpleTextSlider_action_links' );
+include("inc/interface.php");
+
 // TODO: add style css version and prefix
 add_action( 'wp_enqueue_scripts', 'simpleTextSlider_files' );
 
