@@ -26,17 +26,17 @@ $(document).ready(function() {
             name: 'sldie-ani' + simpleTs_total
         }];
         
+        // animate 100%, generate keyframe count, + 2 counts for delay and roll to top animation
+        var simpleTs_aniPercent = 100 / (simpleTs_slideItemCount + 2);
+        
         // slider start keyframe
         simpleTs_aniSetup[0]['0%'] = {'top': '0px'};
-        
-        // animate the first 90%, generate keyframe count
-        var simpleTs_aniPercent = 90 / simpleTs_slideItemCount;
+        simpleTs_aniSetup[0][(simpleTs_aniPercent / 4) + '%'] = {'top': '0px'}; // delay  
         
         // loop through count
-        for (i = 1; i <= simpleTs_slideItemCount; i++) { 
-            console.log("for i: " + i);
-                        
-            var simpleTs_aniPercentItem = (simpleTs_aniPercent * i) + '%';
+        var simpleTs_aniPercentItem;
+        for (i = 1; i <= simpleTs_slideItemCount; i++) {                         
+            simpleTs_aniPercentItem = ((simpleTs_aniPercent * i) + (simpleTs_aniPercent / 4)) + '%';
             simpleTs_aniSetup[0][simpleTs_aniPercentItem] = {'top': (-50 * i) + 'px'};
         }
         
