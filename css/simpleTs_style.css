@@ -1,0 +1,26 @@
+.simpleTs_Container {
+    
+}
+.simpleTs_Container .before, .simpleTs_Container .after {
+    line-height: 20px;
+    display: inline-block;
+    margin-right: 0.3em;
+    padding: 0;
+}
+.simpleTs_Container .outer {
+    position: relative;
+    top: 13px;
+    display: inline-block;
+    overflow: hidden;
+    height: 49px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.simpleTs_Container .inner {
+    font-size: 33px;
+    line-height: 50px;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    padding: 0 10px;
+}
