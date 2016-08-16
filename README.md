@@ -13,9 +13,13 @@ This plugin adds a simple shortcode to your wordpress installation. With this sh
 
 ## Example
 
-    [simple-text-slider before="text" slides="1,2,3" after="text" speed="3"]
+    [simple-text-slider before="text" slides="1,2,3" after="text" speed="3" tag="h3"]
     
 - before: The text before the slider.
 - after: The text after the slider.
 - slides: The slides, seperated by ","
-- speed: The animation speed. Default: slide count + 1
+
+*optional:*
+
+- speed: The animation speed in seconds. Default: slide count + 1
+- tag: You slider container custom tag. Default: div

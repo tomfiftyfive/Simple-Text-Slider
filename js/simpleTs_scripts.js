@@ -56,8 +56,6 @@ $(document).ready(function() {
             simpleTs_aniSpeed = (simpleTs_slideItemCount + 1);
         }
         
-        console.log("speed " + simpleTs_aniSpeed);
-        
         // play keyframe
         $(this).playKeyframe({
             name: 'sldie-ani' + simpleTs_total, // name of the keyframe you want to bind to the selected element

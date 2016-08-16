@@ -31,14 +31,12 @@ function simpleTextSlider($atts) {
         "before" => 'I like',
         "slides" => 'Apples, Bananas, Kartoffelz',
         "after" => 'very much.',
-        "speed" => ''
+        "speed" => '',
+        "tag" => 'div'
         ), $atts));
     
     // split slides
     $slideList = explode( ',', $slides );
-    
-    // TODO: make tag dynamic
-    $tag = "h3";
     
     // count slides
     $slideListOutput = "";
