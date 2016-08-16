@@ -1,10 +1,12 @@
 .simpleTs_Container {
     
 }
+.simpleTs_Container .before {
+    margin-right: 0.3em;
+}
 .simpleTs_Container .before, .simpleTs_Container .after {
     line-height: 20px;
     display: inline-block;
-    margin-right: 0.3em;
     padding: 0;
 }
 .simpleTs_Container .outer {

@@ -45,7 +45,7 @@ function simpleTextSlider($atts) {
     $slideListCount = count($slideList);
     
     $slideListPosition = 0;
-    // loop trough slides and generate them
+    // loop through slides and generate them
     foreach ($slideList as $singleSlide) {
         $slideListPosition++;
         
@@ -60,13 +60,13 @@ function simpleTextSlider($atts) {
     // html return/output
     return 
         '<' . $tag . ' class="simpleTs_Container" style="visibility: visible;">
-            <p class="before">' . $before . '</p>
+            <div class="before">' . $before . '</div>
             <div class="outer">
                 <div class="inner" data-simpleTs-speed="' . $speed . '">
                     ' . $slideListOutput . '
                 </div>
             </div>
-            <p class="after">' . $after . '</p>
+            <div class="after">' . $after . '</div>
         </' . $tag . '>'
     ;
 
