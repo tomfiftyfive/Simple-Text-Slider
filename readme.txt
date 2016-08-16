@@ -6,10 +6,10 @@ This plugin adds a simple shortcode to your wordpress installation. With this sh
 
 ## Installation
 
-- Copy the plugin contents into a folder named simple-text-tlider in you plugin directory of you wordpress installation.
+- Copy the plugin contents into a folder named simple-text-tlider in your plugin directory of your wordpress installation.
 - jQuery is required! You can install jQuery via <https://de.wordpress.org/plugins/jquery-updater/>
 - Activate plugin.
-- Place the shortcode wherever ypu want.
+- Place the shortcode wherever you want.
 
 ## Example
 
