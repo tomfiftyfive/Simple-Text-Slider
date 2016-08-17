@@ -4,7 +4,7 @@ A simple text slider plugin for Wordpress Cms.
 
 This plugin adds a simple shortcode to your wordpress installation. With the [simple-text-slider] shortcode you can output multiple vertical text slider.
 
-![screenshot1](http://i.epvpimg.com/N1pze.png)
+![screenshot1](http://i.epvpimg.com/Ayqqe.png)
 
 ## Installation
 
