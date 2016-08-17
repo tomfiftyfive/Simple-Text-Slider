@@ -4,6 +4,8 @@ A simple text slider plugin for Wordpress Cms.
 
 This plugin adds a simple shortcode to your wordpress installation. With the [simple-text-slider] shortcode you can output multiple vertical text slider.
 
+![screenshot1](http://i.epvpimg.com/N1pze.png)
+
 ## Installation
 
 - Copy the plugin contents into a folder named simple-text-tlider in your plugin directory of your wordpress installation.
