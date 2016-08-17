@@ -65,7 +65,7 @@ function simpleTextSlider_text_field_0_render(  ) {
 
 	$options = get_option( 'simpleTextSlider_settings' );
 	?>
-	<input type="text" class="alpha-color-picker" name='simpleTextSlider_settings[simpleTextSlider_text_field_0]'  value='<?php echo $options['simpleTextSlider_text_field_0']; ?>' data-default-color="#222" data-show-opacity="true" />
+	<input type="text" class="alpha-color-picker" name='simpleTextSlider_settings[simpleTextSlider_text_field_0]'  value='<?php echo $options['simpleTextSlider_text_field_0']; ?>' data-default-color="rgba(0,0,0,0.65)" data-show-opacity="true" />
 	<?php
 }
 

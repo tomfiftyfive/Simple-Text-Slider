@@ -18,6 +18,7 @@ include("inc/interface.php");
 add_action( 'wp_enqueue_scripts', 'simpleTextSlider_files' );
 
 function simpleTextSlider_files() {
+    
     // Respects SSL, Style.css is relative to the current file
     wp_register_style( 'simpleTs-basic', plugins_url('css/simpleTs_style.css', __FILE__) );
     wp_enqueue_style( 'simpleTs-basic' );
@@ -38,6 +39,8 @@ function simpleTextSlider($atts) {
         "slides" => 'Apples, Bananas, Kartoffelz',
         "after" => 'very much.',
         "speed" => '',
+        "color" => '',
+        "style" => '',
         "tag" => 'div'
         ), $atts));
     
@@ -63,12 +66,18 @@ function simpleTextSlider($atts) {
     
     // slider background color
     $customBackgroundColor = $options['simpleTextSlider_text_field_0'];
+    if($color) {
+        // colro via shortcode
+        $customBackgroundColor = $color;
+    } else {
+        // stay with the bg color
+    }
     
     // html return/output
     return 
         '<' . $tag . ' class="simpleTs_Container" style="visibility: visible;">
             <div class="before">' . $before . '</div>
-            <div class="outer" style="background-color: ' . $customBackgroundColor . '">
+            <div class="outer" style="background-color: ' . $customBackgroundColor . ';' . $style . '">
                 <div class="inner" data-simpleTs-speed="' . $speed . '">
                     ' . $slideListOutput . '
                 </div>

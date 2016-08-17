@@ -1,25 +1,26 @@
-# Simple-Text-Slider
+=== Simple-Text-Slider ===
+Contributors: Tom Henneken
+Tags: text, slider, vertical, slides, textslider
+Requires at least: 3.5
+Tested up to: 4.1
+Stable tag: 1.0.0
+License: GPL
 
 A simple text slider plugin for Wordpress Cms.
 
+== Description ==
+
 This plugin adds a simple shortcode to your wordpress installation. With the [simple-text-slider] shortcode you can output multiple vertical text slider.
 
-## Installation
+== Installation ==
 
-- Copy the plugin contents into a folder named simple-text-tlider in your plugin directory of your wordpress installation.
-- jQuery is required! You can install jQuery via <https://de.wordpress.org/plugins/jquery-updater/>
-- Activate plugin.
-- Place the shortcode wherever you want.
+* Copy the plugin contents into a folder named simple-text-tlider in your plugin directory of your wordpress installation.
+* jQuery is required! You can install jQuery via <https://de.wordpress.org/plugins/jquery-updater/>
+* Activate plugin.
+* Place the shortcode wherever you want.
 
-## Example
+== Changelog ==
 
-    [simple-text-slider before="text" slides="1,2,3" after="text" speed="3" tag="h3"]
-    
-- before: The text before the slider.
-- after: The text after the slider.
-- slides: The slides, seperated by ","
+= 1.0.0 =
 
-*optional:*
-
-- speed: The animation speed in seconds. Default: slide count + 1
-- tag: Your slider container custom tag. Default: div
+* Initial setup
