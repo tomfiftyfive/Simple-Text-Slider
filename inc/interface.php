@@ -81,23 +81,38 @@ function simpleTextSlider_textarea_field_1_render(  ) {
 
 function simpleTextSlider_settings_section_callback(  ) { 
 
-	echo __( 'How to use:', 'wordpress' );
     ?>
-    <p>placeholder</p>
+    <p><b>Note: <a href="https://de.wordpress.org/plugins/jquery-updater/" target="_blank">jQuery</a> is required!</b></p>
     <?php
 }
 
 function simpleTextSlider_options_page(  ) { 
 
 	?>
-	<form action='options.php' method='post'>
-		<h2>Simple Text Slider</h2>
-		<?php
-		settings_fields( 'pluginPage' );
-		do_settings_sections( 'pluginPage' );
-		submit_button();
-		?>
-	</form>
+	<div class="wrap">
+        <h2>Simple Text Slider</h2>
+        <p>Adds a simple shortcode to output multiple vertical text slider.</p>
+        <form action='options.php' method='post'>
+            <?php
+            settings_fields( 'pluginPage' );
+            do_settings_sections( 'pluginPage' );
+            submit_button();
+            ?>
+        </form>
+        <h2>How to use</h2>
+        <p>Add the following shortcode wherever you want, to display a vertical text slider. You can use the code several times.</p>
+        <p><code>[simple-text-slider before="text" slides="1,2,3" after="text"]</code></p>
+        <h3><b>Example</b></h3>
+        <p><code>[simple-text-slider before="text" slides="1,2,3" after="text" speed="3" tag="h3"]</code></p>
+        <ul>
+            <li><b>before:</b> The text before the slider.</li>
+            <li><b>after:</b> The text after the slider.</li>
+            <li><b>slides:</b> The slides, seperated by ","</li>
+            <li><b>Optional</b></li>
+            <li><b>speed:</b> The animation speed in seconds. Default: slide count + 1</li>
+            <li><b>tag:</b> Your slider container custom tag. Default: div</li>
+        </ul>
+	</div>
 	<?php
 }
 ?>

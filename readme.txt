@@ -2,7 +2,7 @@
 
 A simple text slider plugin for Wordpress Cms.
 
-This plugin adds a simple shortcode to your wordpress installation. With this shortcode you can output multiple vertical text slider.
+This plugin adds a simple shortcode to your wordpress installation. With the [simple-text-slider] shortcode you can output multiple vertical text slider.
 
 ## Installation
 
@@ -13,9 +13,13 @@ This plugin adds a simple shortcode to your wordpress installation. With this sh
 
 ## Example
 
-    [simple-text-slider before="text" slides="1,2,3" after="text" speed="3"]
+    [simple-text-slider before="text" slides="1,2,3" after="text" speed="3" tag="h3"]
     
 - before: The text before the slider.
 - after: The text after the slider.
 - slides: The slides, seperated by ","
+
+*optional:*
+
 - speed: The animation speed in seconds. Default: slide count + 1
+- tag: Your slider container custom tag. Default: div
