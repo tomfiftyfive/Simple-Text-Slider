@@ -31,6 +31,8 @@ function simpleTextSlider_files() {
 
 // shortcode function
 function simpleTextSlider($atts) {
+    $options = get_option( 'simpleTextSlider_settings' );
+    
     extract(shortcode_atts(array(
         "before" => 'I like',
         "slides" => 'Apples, Bananas, Kartoffelz',
@@ -59,11 +61,14 @@ function simpleTextSlider($atts) {
         
     }
     
+    // slider background color
+    $customBackgroundColor = $options['simpleTextSlider_text_field_0'];
+    
     // html return/output
     return 
         '<' . $tag . ' class="simpleTs_Container" style="visibility: visible;">
             <div class="before">' . $before . '</div>
-            <div class="outer">
+            <div class="outer" style="background-color: ' . $customBackgroundColor . '">
                 <div class="inner" data-simpleTs-speed="' . $speed . '">
                     ' . $slideListOutput . '
                 </div>
