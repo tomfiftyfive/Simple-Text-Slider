@@ -2,6 +2,16 @@
  * Alpha Color Picker CSS
  */
 
+.alpha-color-picker-wrap {
+    position: relative;
+}
+
+.wp-picker-container {
+    position: absolute;
+    top: -12px;
+    z-index: 1;
+}
+
 .alpha-color-picker-wrap .wp-picker-container .iris-picker {
 	border-bottom: none;
 }
