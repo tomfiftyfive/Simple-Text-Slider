@@ -39,7 +39,8 @@ function simpleTextSlider($atts) {
         "slides" => 'Apples, Bananas, Kartoffelz',
         "after" => 'very much.',
         "speed" => '',
-        "color" => '',
+        "bcolor" => '',
+        "tcolor" => '',
         "style" => '',
         "tag" => 'div'
         ), $atts));
@@ -66,9 +67,16 @@ function simpleTextSlider($atts) {
     
     // slider background color
     $customBackgroundColor = $options['simpleTextSlider_text_field_0'];
-    if($color) {
-        // colro via shortcode
-        $customBackgroundColor = $color;
+    $customTextColor = $options['simpleTextSlider_text_field_1'];
+    if($bcolor) {
+        // background color via shortcode
+        $customBackgroundColor = $bcolor;
+    } else {
+        // stay with the text color
+    }
+    if($tcolor) {
+        // text color via shortcode
+        $customTextColor = $tcolor;
     } else {
         // stay with the bg color
     }
@@ -77,7 +85,7 @@ function simpleTextSlider($atts) {
     return 
         '<' . $tag . ' class="simpleTs_Container" style="visibility: visible;">
             <div class="before">' . $before . '</div>
-            <div class="outer" style="background-color: ' . $customBackgroundColor . ';' . $style . '">
+            <div class="outer" style="background-color: ' . $customBackgroundColor . ';color:' . $customTextColor . ';' . $style . '">
                 <div class="inner" data-simpleTs-speed="' . $speed . '">
                     ' . $slideListOutput . '
                 </div>

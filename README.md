@@ -13,7 +13,7 @@ This plugin adds a simple shortcode to your wordpress installation. With the [si
 
 ## Example
 
-    [simple-text-slider before="text" slides="1,2,3" after="text" speed="3" tag="h3" style="border-radius: 6px; color: red"]
+    [simple-text-slider before="I do" slides="This,That,Everything" after="and it's fun!" speed="3" tag="h3" bcolor="#000" tcolor="#fff" style="border-radius: 6px;"]
     
 - before: The text before the slider.
 - after: The text after the slider.
@@ -23,5 +23,6 @@ This plugin adds a simple shortcode to your wordpress installation. With the [si
 
 - speed: The animation speed in seconds. Default: slide count + 1
 - tag: Your slider container custom tag. Default: div
-- color: Custom background color for single slider.
-- style: Custom css style, seperated by ",". Example: style="border-radius: 6px; color: red"
+- bcolor: Custom background color for single slider.
+- tcolor: Custom text color for single slider.
+- style: Custom css style, seperated by ",". Example: style="border-radius: 6px;"
