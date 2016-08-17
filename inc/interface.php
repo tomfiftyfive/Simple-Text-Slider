@@ -99,6 +99,7 @@ function simpleTextSlider_options_page(  ) {
             submit_button();
             ?>
         </form>
+        <hr>
         <h2>How to use</h2>
         <p>Add the following shortcode wherever you want, to display a vertical text slider. You can use the code several times.</p>
         <p><code>[simple-text-slider before="text" slides="1,2,3" after="text"]</code></p>
@@ -112,6 +113,8 @@ function simpleTextSlider_options_page(  ) {
             <li><b>speed:</b> The animation speed in seconds. Default: slide count + 1</li>
             <li><b>tag:</b> Your slider container custom tag. Default: div</li>
         </ul>
+        <hr>
+        <p>Simple Text Slider Wordpress Plugin by <a href="https://tom-henneken.de" target="_blank">Tom Henneken</a>.</p>
 	</div>
 	<?php
 }

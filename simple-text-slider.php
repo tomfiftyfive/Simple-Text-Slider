@@ -7,7 +7,7 @@ defined( 'ABSPATH' ) or die( 'Nope!' );
     Version: 1.0
     Author: Tom Henneken
     Author URI: http://tom-henneken.de
-    Description: Adds a simple shortcode to output a vertical text slider.
+    Description: Adds a simple shortcode to output serveral vertical text slider wherever you want.
     License: GPL
 */
 
