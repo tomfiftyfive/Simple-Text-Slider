@@ -115,7 +115,7 @@ function simpleTextSlider_options_page(  ) {
             <li><b>style:</b> Custom css style, seperated by ",". Example: style="border-radius: 6px;"</li>
         </ul>
         <hr>
-        <p>Simple Text Slider Wordpress Plugin by <a href="https://tom-henneken.de" target="_blank">Tom Henneken</a>.</p>
+        <p>Simple Text Slider Wordpress Plugin by <a href="https://tom-henneken.de/?utm_source=wpplugin&utm_medium=link&utm_campaign=backend-stslider" target="_blank">Tom Henneken</a>.</p>
 	</div>
 	<?php
 }
