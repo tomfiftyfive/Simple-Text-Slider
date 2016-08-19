@@ -65,27 +65,30 @@ function simpleTextSlider($atts) {
         
     }
     
-    // slider background color
-    $customBackgroundColor = $options['simpleTextSlider_text_field_0'];
-    $customTextColor = $options['simpleTextSlider_text_field_1'];
+    // set bg and text color
     if($bcolor) {
         // background color via shortcode
         $customBackgroundColor = $bcolor;
     } else {
-        // stay with the text color
+        // background color via options
+        $customBackgroundColor = $options['simpleTextSlider_text_field_0'];
+        
     }
     if($tcolor) {
         // text color via shortcode
         $customTextColor = $tcolor;
     } else {
-        // stay with the bg color
+        // text color via options
+        $customTextColor = $options['simpleTextSlider_text_field_1'];
     }
+    $customBackgroundColor = 'background-color: ' . $customBackgroundColor . ';';
+    $customTextColor = 'color: ' . $customTextColor . ';';
     
     // html return/output
     return 
         '<' . $tag . ' class="simpleTs_Container" style="visibility: visible;">
             <div class="before">' . $before . '</div>
-            <div class="outer" style="background-color: ' . $customBackgroundColor . ';color:' . $customTextColor . ';' . $style . '">
+            <div class="outer" style="' . $customBackgroundColor . $customTextColor . $style . '">
                 <div class="inner" data-simpleTs-speed="' . $speed . '">
                     ' . $slideListOutput . '
                 </div>
