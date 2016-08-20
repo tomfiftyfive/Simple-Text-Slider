@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) or die( 'Nope!' );
 /*
     Plugin Name: Simple Text Slider
     Plugin URI: http://tom-henneken.de
-    Version: 1.0
+    Version: 1.0.1
     Author: Tom Henneken
     Author URI: http://tom-henneken.de
     Description: Adds a simple shortcode to output serveral vertical text slider wherever you want.
@@ -36,7 +36,7 @@ function simpleTextSlider($atts) {
     
     extract(shortcode_atts(array(
         "before" => 'I like',
-        "slides" => 'Apples, Bananas, Kartoffelz',
+        "slides" => 'Simple, Text, Slider',
         "after" => 'very much.',
         "speed" => '',
         "bcolor" => '',
