@@ -3,7 +3,7 @@ Contributors: w1zzard
 Tags: text, slider, vertical, slides, textslider
 Requires at least: 3.5
 Tested up to: 4.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPL
 
 A simple text slider plugin for several vertical textslider via shortcode.
@@ -30,7 +30,7 @@ The animations are implemented with dynamic css animations and therefore very sm
 * Activate plugin.
 * Place the shortcode wherever you want.
 
-** From Github**
+**From Github**
 
 * Download and unzip.
 * Copy the plugin contents into a folder named simple-text-tlider in your plugin directory of your wordpress installation.
@@ -43,6 +43,10 @@ The animations are implemented with dynamic css animations and therefore very sm
 1. A slider. Nice!
 
 == Changelog ==
+
+= 1.0.2 =
+* Optimized css class names
+* Text updates
 
 = 1.0.1 =
 * readme update

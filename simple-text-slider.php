@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) or die( 'Nope!' );
 /*
     Plugin Name: Simple Text Slider
     Plugin URI: http://tom-henneken.de
-    Version: 1.0.1
+    Version: 1.0.2
     Author: Tom Henneken
     Author URI: http://tom-henneken.de
     Description: Adds a simple shortcode to output serveral vertical text slider wherever you want.
@@ -87,13 +87,13 @@ function simpleTextSlider($atts) {
     // html return/output
     return 
         '<' . $tag . ' class="simpleTs_Container" style="visibility: visible;">
-            <div class="before">' . $before . '</div>
-            <div class="outer" style="' . $customBackgroundColor . $customTextColor . $style . '">
-                <div class="inner" data-simpleTs-speed="' . $speed . '">
+            <div class="simpleTs_before">' . $before . '</div>
+            <div class="simpleTs_outer" style="' . $customBackgroundColor . $customTextColor . $style . '">
+                <div class="simpleTs_inner" data-simpleTs-speed="' . $speed . '">
                     ' . $slideListOutput . '
                 </div>
             </div>
-            <div class="after">' . $after . '</div>
+            <div class="simpleTs_after">' . $after . '</div>
         </' . $tag . '>'
     ;
 

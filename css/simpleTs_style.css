@@ -1,15 +1,15 @@
 .simpleTs_Container {
     
 }
-.simpleTs_Container .before {
+.simpleTs_Container .simpleTs_before {
     
 }
-.simpleTs_Container .before, .simpleTs_Container .after {
+.simpleTs_Container .simpleTs_before, .simpleTs_Container .simpleTs_after {
     line-height: 20px;
     display: inline-block;
     padding: 0;
 }
-.simpleTs_Container .outer {
+.simpleTs_Container .simpleTs_outer {
     position: relative;
     top: 13px;
     display: inline-block;
@@ -17,7 +17,7 @@
     height: 49px;
     background-color: rgba(0, 0, 0, 0.3);
 }
-.simpleTs_Container .inner {
+.simpleTs_Container .simpleTs_inner {
     font-size: 33px;
     line-height: 50px;
     position: relative;

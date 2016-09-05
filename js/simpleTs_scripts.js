@@ -9,7 +9,7 @@ $(document).ready(function() {
     var simpleTs_total = 0;
     
     // create a slider for each class: .simpleTs_Container .inner
-    $(".simpleTs_Container .inner").each(function() {
+    $(".simpleTs_Container .simpleTs_inner").each(function() {
         // total
         simpleTs_total++;
         
@@ -42,8 +42,6 @@ $(document).ready(function() {
         
         // final keyframe = reset 
         simpleTs_aniSetup[0]['100%'] = {'top': '0px'};
-        
-        console.log(simpleTs_aniSetup);
         
         // define keyframe
         $.keyframe.define(simpleTs_aniSetup);
