@@ -90,7 +90,7 @@ function simpleTextSlider_text_field_2_render(  ) {
 	$options = get_option( 'simpleTextSlider_settings' );
 	?>
  	<input type="text" name='simpleTextSlider_settings[simpleTextSlider_text_field_2]'  value='<?php echo $options['simpleTextSlider_text_field_2']; ?>' style="width: 30px" /> Default = ","
- 	<p><b>Note: If you set an other delimiter than the default, consider this in you shortcode!</b></p>
+ 	<p><b>Note: If you set an other delimiter than the default, consider this in your shortcode!</b></p>
 	<?php
 }
 
