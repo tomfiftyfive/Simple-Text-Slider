@@ -68,11 +68,6 @@ function simpleTextSlider_settings_init(  ) {
 	);
 }
 
-// set options default
-if(get_option('simpleTextSlider_text_field_2') == false) {
-    update_option('simpleTextSlider_text_field_2', ',');
-}
-
 // render interface output
 function simpleTextSlider_text_field_0_render(  ) { 
 
@@ -110,6 +105,9 @@ function simpleTextSlider_options_page(  ) {
     
     $options = get_option( 'simpleTextSlider_settings' );
     $delimiter = $options['simpleTextSlider_text_field_2'];
+    if(!($delimiter)){
+        $delimiter = ',';
+    }
 
 	?>
 	<div class="wrap">
