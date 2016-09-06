@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) or die( 'Nope!' );
 /*
     Plugin Name: Simple Text Slider
     Plugin URI: http://tom-henneken.de
-    Version: 1.0.2
+    Version: 1.0.3
     Author: Tom Henneken
     Author URI: http://tom-henneken.de
     Description: Adds a simple shortcode to output serveral vertical text slider wherever you want.
@@ -33,6 +33,10 @@ function simpleTextSlider_files() {
 // shortcode function
 function simpleTextSlider($atts) {
     $options = get_option( 'simpleTextSlider_settings' );
+    $delimiter = $options['simpleTextSlider_text_field_2'];
+    if(!($delimiter)) {
+        $delimiter = ',';
+    }
     
     extract(shortcode_atts(array(
         "before" => 'I like',
@@ -46,7 +50,7 @@ function simpleTextSlider($atts) {
         ), $atts));
     
     // split slides
-    $slideList = explode( ',', $slides );
+    $slideList = explode($delimiter, $slides);
     
     // count slides
     $slideListOutput = "";

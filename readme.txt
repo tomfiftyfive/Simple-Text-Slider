@@ -3,7 +3,7 @@ Contributors: w1zzard
 Tags: text, slider, vertical, slides, textslider
 Requires at least: 3.5
 Tested up to: 4.6
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPL
 
 A simple text slider plugin for several vertical textslider via shortcode.
@@ -43,6 +43,10 @@ The animations are implemented with dynamic css animations and therefore very sm
 1. A slider. Nice!
 
 == Changelog ==
+
+= 1.0.3 =
+* Fixed color-picker css bug
+* New global option: Delimiter
 
 = 1.0.2 =
 * Optimized css class names

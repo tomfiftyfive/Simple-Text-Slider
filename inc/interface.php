@@ -58,6 +58,19 @@ function simpleTextSlider_settings_init(  ) {
 		'pluginPage', 
 		'simpleTextSlider_pluginPage_section' 
 	);
+    
+    add_settings_field( 
+		'simpleTextSlider_text_field_2', 
+		__( 'Delimiter:', 'wordpress' ), 
+		'simpleTextSlider_text_field_2_render', 
+		'pluginPage', 
+		'simpleTextSlider_pluginPage_section' 
+	);
+}
+
+// set options default
+if(get_option('simpleTextSlider_text_field_2') == false) {
+    update_option('simpleTextSlider_text_field_2', ',');
 }
 
 // render interface output
@@ -65,7 +78,7 @@ function simpleTextSlider_text_field_0_render(  ) {
 
 	$options = get_option( 'simpleTextSlider_settings' );
 	?>
-	<input type="text" class="alpha-color-picker" name='simpleTextSlider_settings[simpleTextSlider_text_field_0]'  value='<?php echo $options['simpleTextSlider_text_field_0']; ?>' data-default-color="rgba(0,0,0,0.3)" data-show-opacity="true" />
+	<input type="text" class="alpha-color-picker simpleTs" name='simpleTextSlider_settings[simpleTextSlider_text_field_0]'  value='<?php echo $options['simpleTextSlider_text_field_0']; ?>' data-default-color="rgba(0,0,0,0.3)" data-show-opacity="true" />
 	<?php
 }
 
@@ -73,7 +86,16 @@ function simpleTextSlider_text_field_1_render(  ) {
 
 	$options = get_option( 'simpleTextSlider_settings' );
 	?>
- 	<input type="text" class="alpha-color-picker" name='simpleTextSlider_settings[simpleTextSlider_text_field_1]'  value='<?php echo $options['simpleTextSlider_text_field_1']; ?>' data-default-color="rgba(255,255,255,1)" data-show-opacity="true" />
+ 	<input type="text" class="alpha-color-picker simpleTs" name='simpleTextSlider_settings[simpleTextSlider_text_field_1]'  value='<?php echo $options['simpleTextSlider_text_field_1']; ?>' data-default-color="rgba(255,255,255,1)" data-show-opacity="true" />
+	<?php
+}
+
+function simpleTextSlider_text_field_2_render(  ) { 
+
+	$options = get_option( 'simpleTextSlider_settings' );
+	?>
+ 	<input type="text" name='simpleTextSlider_settings[simpleTextSlider_text_field_2]'  value='<?php echo $options['simpleTextSlider_text_field_2']; ?>' style="width: 30px" /> Default = ","
+ 	<p><b>Note: If you set an other delimiter than the default, consider this in you shortcode!</b></p>
 	<?php
 }
 
@@ -85,6 +107,9 @@ function simpleTextSlider_settings_section_callback(  ) {
 }
 
 function simpleTextSlider_options_page(  ) { 
+    
+    $options = get_option( 'simpleTextSlider_settings' );
+    $delimiter = $options['simpleTextSlider_text_field_2'];
 
 	?>
 	<div class="wrap">
@@ -100,19 +125,19 @@ function simpleTextSlider_options_page(  ) {
         <hr>
         <h2>How to use</h2>
         <p>Add the following shortcode wherever you want, to display a vertical text slider. You can use the code several times.</p>
-        <p><code>[simple-text-slider before="text" slides="1,2,3" after="text"]</code></p>
+        <p><code>[simple-text-slider before="text" slides="1<?php echo $delimiter; ?>2<?php echo $delimiter; ?>3" after="text"]</code></p>
         <h3><b>Example</b></h3>
-        <p><code>[simple-text-slider before="I do" slides="This,That,Everything" after="and it's fun!" speed="3" tag="h3" bcolor="#000" tcolor="#fff" style="border-radius: 6px;"]</code></p>
+        <p><code>[simple-text-slider before="I do" slides="This<?php echo $delimiter; ?>That<?php echo $delimiter; ?>Everything" after="and it's fun!" speed="3" tag="h3" bcolor="#000" tcolor="#fff" style="border-radius: 6px;"]</code></p>
         <ul>
             <li><b>before:</b> The text before the slider.</li>
             <li><b>after:</b> The text after the slider.</li>
-            <li><b>slides:</b> The slides, seperated by ","</li>
+            <li><b>slides:</b> The slides, seperated by "<?php echo $delimiter; ?>" default = ","</li>
             <li><b>Optional</b></li>
             <li><b>speed:</b> The animation speed in seconds. Default: slide count + 1</li>
             <li><b>tag:</b> Your slider container custom tag. Default: div</li>
             <li><b>bcolor:</b> Custom background color for single slider.</li>
             <li><b>tcolor:</b> Custom text color for single slider.</li>
-            <li><b>style:</b> Custom css style, seperated by ",". Example: style="border-radius: 6px;"</li>
+            <li><b>style:</b> Custom css style, seperated by ";". Example: style="border-radius: 6px;"</li>
         </ul>
         <hr>
         <p>Thank you for downloading.</p>

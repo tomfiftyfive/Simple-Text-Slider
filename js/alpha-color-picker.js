@@ -105,7 +105,7 @@
 
 			// We must wrap the input now in order to get our a top level class
 			// around the HTML added by wpColorPicker().
-			$input.wrap( '<div class="alpha-color-picker-wrap"></div>' );
+			$input.wrap( '<div class="alpha-color-picker-wrap simpleTs"></div>' );
 
 			// Get some data off the input.
 			paletteInput = $input.attr( 'data-palette' ) || 'true';

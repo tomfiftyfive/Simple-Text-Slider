@@ -1,5 +1,5 @@
 jQuery( document ).ready( function( $ ) {
-    $( 'input.alpha-color-picker' ).alphaColorPicker();
+    $( 'input.alpha-color-picker.simpleTs' ).alphaColorPicker();
     
     var alphaColorZindex = 100;
     $('.wp-picker-container').each(function() {
