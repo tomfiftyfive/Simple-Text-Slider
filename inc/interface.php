@@ -112,7 +112,7 @@ function simpleTextSlider_options_page(  ) {
 	?>
 	<div class="wrap">
         <h2>Simple Text Slider</h2>
-        <p>Adds a simple shortcode to output multiple vertical text slider.</p>
+        <p>Adds a simple shortcode to output multiple vertical text slider. <a href="https://tom-henneken.de/simple-text-slider-demos/" target="_blank">Demo</a></p>
         <form action='options.php' method='post'>
             <?php
             settings_fields( 'pluginPage' );
