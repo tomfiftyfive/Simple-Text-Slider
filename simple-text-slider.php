@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) or die( 'Nope!' );
 /*
     Plugin Name: Simple Text Slider
     Plugin URI: http://tom-henneken.de
-    Version: 1.0.4
+    Version: 1.0.5
     Author: Tom Henneken
     Author URI: http://tom-henneken.de
     Description: Adds a simple shortcode to output serveral vertical text slider wherever you want.
